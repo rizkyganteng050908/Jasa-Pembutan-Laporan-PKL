@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RZR PKL Service menyediakan jasa pendampingan, editing dan perapian laporan PKL dengan harga terjangkau.">
+<title>RZR PKL Service — Pendampingan Laporan PKL</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#142c49;
+  --blue:#285b91;
+  --light:#f5f7fa;
+  --text:#202b39;
+  --muted:#697789;
+  --border:#e5e9ef;
+  --white:#ffffff;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html {scroll-behavior:smooth}
+
+body {
+  font-family:'DM Sans',sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.7;
+}
+
+a {text-decoration:none;color:inherit}
+
+.container {
+  max-width:1120px;
+  width:90%;
+  margin:auto;
+}
+
+/* NAVBAR */
+
+header {
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+nav {
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand {
+  font-family:'Manrope',sans-serif;
+  font-size:21px;
+  font-weight:800;
+  color:var(--navy);
+  letter-spacing:-1px;
+}
+
+.brand span {color:#3979b9}
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-links a {
+  font-size:13px;
+  color:#526174;
+  font-weight:600;
+}
+
+.nav-links a:hover {color:#3979b9}
+
+.btn {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:12px 20px;
+  background:var(--navy);
+  color:white;
+  border-radius:5px;
+  font-size:13px;
+  font-weight:700;
+  border:1px solid var(--navy);
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn:hover {
+  background:#244d78;
+  border-color:#244d78;
+}
+
+.btn-light {
+  background:white;
+  color:var(--navy);
+  border:1px solid #d8e0e9;
+}
+
+.btn-light:hover {
+  background:#f3f6f9;
+  color:var(--navy);
+}
+
+/* HERO */
+
+.hero {
+  padding:95px 0;
+  background:#f5f7fa;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:70px;
+}
+
+.eyebrow {
+  color:#3979b9;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+h1 {
+  font-family:'Manrope',sans-serif;
+  color:var(--navy);
+  font-size:clamp(37px,5vw,55px);
+  line-height:1.2;
+  letter-spacing:-2px;
+  margin:20px 0;
+}
+
+.hero-description {
+  color:var(--muted);
+  font-size:15px;
+  max-width:520px;
+}
+
+.hero-buttons {
+  display:flex;
+  gap:12px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.hero-note {
+  margin-top:27px;
+  color:#718093;
+  font-size:12px;
+}
+
+.hero-note span {margin-right:15px}
+
+/* DOCUMENT IMAGE */
+
+.document-preview {
+  background:white;
+  border:1px solid #dfe5ec;
+  padding:32px;
+  box-shadow:0 12px 35px rgba(24,43,67,.06);
+  max-width:420px;
+  margin-left:auto;
+  width:100%;
+}
+
+.document-top {
+  text-align:center;
+  border-bottom:2px solid #263c55;
+  padding-bottom:17px;
+}
+
+.document-top strong {
+  font-family:'Manrope',sans-serif;
+  font-size:13px;
+  color:var(--navy);
+  display:block;
+}
+
+.document-top small {
+  color:#8995a3;
+  font-size:9px;
+}
+
+.document-title {
+  text-align:center;
+  margin:35px 0;
+  color:var(--navy);
+}
+
+.document-title h3 {
+  font-family:'Manrope',sans-serif;
+  font-size:17px;
+  line-height:1.5;
+}
+
+.document-title p {
+  font-size:10px;
+  margin-top:10px;
+  color:#7c8998;
+}
+
+.doc-line {
+  height:5px;
+  background:#e8edf2;
+  margin:12px 0;
+  border-radius:2px;
+}
+
+.doc-line.short {width:65%}
+.doc-line.medium {width:85%}
+
+.document-footer {
+  margin-top:38px;
+  text-align:center;
+  font-size:10px;
+  color:#8491a0;
+}
+
+/* GENERAL SECTIONS */
+
+section {padding:85px 0}
+
+.section-heading {
+  max-width:650px;
+  margin-bottom:42px;
+}
+
+.section-heading.center {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.section-heading small {
+  color:#3979b9;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.section-heading h2 {
+  font-family:'Manrope',sans-serif;
+  font-size:34px;
+  letter-spacing:-1px;
+  color:var(--navy);
+  margin:10px 0;
+}
+
+.section-heading p {
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* SERVICES */
+
+.services {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border-top:1px solid var(--border);
+  border-left:1px solid var(--border);
+}
+
+.service {
+  padding:28px;
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  transition:.2s;
+}
+
+.service:hover {
+  background:#f8fafc;
+}
+
+.service-number {
+  color:#3979b9;
+  font-family:'Manrope',sans-serif;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.service h3 {
+  color:var(--navy);
+  font-family:'Manrope',sans-serif;
+  font-size:17px;
+  margin-bottom:10px;
+}
+
+.service p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ABOUT */
+
+.about {
+  background:#f5f7fa;
+}
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.about h2 {
+  color:var(--navy);
+  font-family:'Manrope',sans-serif;
+  font-size:34px;
+  line-height:1.3;
+  margin:12px 0 18px;
+}
+
+.about p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.about-list {
+  margin-top:23px;
+  list-style:none;
+}
+
+.about-list li {
+  padding:10px 0;
+  border-bottom:1px solid #dfe5ec;
+  font-size:13px;
+  color:#465568;
+}
+
+.about-list li::before {
+  content:"✓";
+  color:#3979b9;
+  font-weight:800;
+  margin-right:12px;
+}
+
+.about-box {
+  background:var(--navy);
+  padding:38px;
+  color:white;
+}
+
+.about-box h3 {
+  font-family:'Manrope',sans-serif;
+  font-size:23px;
+  margin-bottom:15px;
+}
+
+.about-box p {
+  color:#d0dbe8;
+  font-size:13px;
+}
+
+/* PRICE */
+
+.price-section {background:white}
+
+.price-card {
+  max-width:780px;
+  margin:auto;
+  border:1px solid var(--border);
+  padding:35px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+
+.price-card h3 {
+  color:var(--navy);
+  font-size:21px;
+  margin-bottom:8px;
+}
+
+.price-card p {
+  color:var(--muted);
+  font-size:13px;
+  max-width:480px;
+}
+
+.price-label {
+  font-size:12px;
+  color:#3979b9;
+  font-weight:800;
+  margin-bottom:13px;
+  white-space:nowrap;
+}
+
+/* PROCESS */
+
+.process {
+  background:#f5f7fa;
+}
+
+.steps {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.step {
+  border-top:2px solid #c8d6e5;
+  padding-top:20px;
+}
+
+.step-number {
+  font-size:12px;
+  font-weight:800;
+  color:#3979b9;
+  margin-bottom:12px;
+}
+
+.step h3 {
+  color:var(--navy);
+  font-size:17px;
+  margin-bottom:8px;
+}
+
+.step p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background:white;
+}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:65px;
+}
+
+.contact-info h2 {
+  font-family:'Manrope',sans-serif;
+  font-size:33px;
+  color:var(--navy);
+  line-height:1.3;
+  margin:12px 0;
+}
+
+.contact-info p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.contact-number {
+  display:inline-block;
+  margin-top:24px;
+  color:#3979b9;
+  font-size:19px;
+  font-weight:800;
+}
+
+.contact-form {
+  background:#f5f7fa;
+  padding:30px;
+  border:1px solid var(--border);
+}
+
+.form-group {margin-bottom:17px}
+
+label {
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  color:#465568;
+  margin-bottom:5px;
+}
+
+input,select,textarea {
+  width:100%;
+  padding:13px;
+  border:1px solid #dce3eb;
+  background:white;
+  color:#25364a;
+  border-radius:4px;
+  outline:none;
+  font-family:inherit;
+  font-size:13px;
+}
+
+input:focus,select:focus,textarea:focus {
+  border-color:#3979b9;
+}
+
+textarea {
+  resize:vertical;
+  min-height:105px;
+}
+
+.contact-form button {width:100%}
+
+/* FOOTER */
+
+footer {
+  background:#10243c;
+  color:#d5dfeb;
+  padding:35px 0;
+}
+
+.footer-content {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-brand {
+  font-family:'Manrope',sans-serif;
+  font-size:18px;
+  font-weight:800;
+}
+
+footer p {
+  font-size:12px;
+  color:#a7b8cb;
+}
+
+.footer-links {
+  display:flex;
+  gap:20px;
+  font-size:12px;
+}
+
+.footer-links a:hover {color:white}
+
+/* WHATSAPP */
+
+.whatsapp {
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  background:#168b5c;
+  color:white;
+  padding:13px 19px;
+  border-radius:5px;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:0 5px 20px #0002;
+  z-index:99;
+}
+
+.whatsapp:hover {background:#117449}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+  .nav-links {display:none}
+  .hero-grid,.about-grid,.contact-grid {
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+  .document-preview {margin:0;max-width:100%}
+  .services {grid-template-columns:repeat(2,1fr)}
+  .about-grid {gap:30px}
+}
+
+@media(max-width:550px) {
+  nav {height:68px}
+  .brand {font-size:18px}
+  .hero {padding:65px 0}
+  section {padding:60px 0}
+  .services,.steps {grid-template-columns:1fr}
+  .section-heading h2,.about h2,.contact-info h2 {
+    font-size:27px;
+  }
+  .price-card {
+    flex-direction:column;
+    align-items:flex-start;
+    padding:25px;
+  }
+  .contact-form {padding:20px}
+  .whatsapp {
+    right:13px;
+    bottom:13px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<a href="#home" class="brand">RZR <span>PKL SERVICE.</span></a>
+
+<div class="nav-links">
+<a href="#home">Beranda</a>
+<a href="#layanan">Layanan</a>
+<a href="#tentang">Tentang</a>
+<a href="#harga">Harga</a>
+<a href="#kontak">Kontak</a>
+</div>
+
+<a href="#kontak" class="btn">Konsultasi</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-grid">
+
+<div>
+<div class="eyebrow">LAYANAN LAPORAN PRAKTIK KERJA LAPANGAN</div>
+
+<h1>
+Pendampingan Laporan PKL dengan Harga Terjangkau.
+</h1>
+
+<p class="hero-description">
+Kami membantu proses penyusunan, editing, dan perapian laporan
+Praktik Kerja Lapangan agar lebih terstruktur, rapi, dan sesuai
+dengan pedoman sekolah. Layanan bersahabat dengan biaya yang
+ramah di kantong.
+</p>
+
+<div class="hero-buttons">
+<a class="btn" href="https://wa.me/62895401061300?text=Halo%20RZR%20PKL%20Service%2C%20saya%20ingin%20konsultasi.">
+Hubungi Kami ↗
+</a>
+
+<a class="btn btn-light" href="#layanan">
+Lihat Layanan
+</a>
+</div>
+
+<div class="hero-note">
+<span>✓ Harga terjangkau</span>
+<span>✓ Konsultasi mudah</span>
+<span>✓ Pelayanan ramah</span>
+</div>
+</div>
+
+<div class="document-preview">
+<div class="document-top">
+<strong>LAPORAN PRAKTIK KERJA LAPANGAN</strong>
+<small>DOKUMEN LAPORAN</small>
+</div>
+
+<div class="document-title">
+<h3>LAPORAN<br>PRAKTIK KERJA LAPANGAN</h3>
+<p>TAHUN PELAJARAN 2026/2027</p>
+</div>
+
+<div class="doc-line"></div>
+<div class="doc-line medium"></div>
+<div class="doc-line short"></div>
+<div class="doc-line"></div>
+<div class="doc-line medium"></div>
+
+<div class="document-footer">
+RZR PKL SERVICE
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="layanan">
+<div class="container">
+
+<div class="section-heading center">
+<small>LAYANAN KAMI</small>
+<h2>Bantuan Laporan PKL</h2>
+<p>Pilih layanan sesuai kebutuhan dan bagian laporan yang ingin kamu rapikan.</p>
+</div>
+
+<div class="services">
+
+<div class="service">
+<div class="service-number">01 / LAYANAN</div>
+<h3>Pendampingan Penyusunan</h3>
+<p>Bantuan menyusun laporan berdasarkan pengalaman dan kegiatan PKL yang benar-benar kamu jalani.</p>
+</div>
+
+<div class="service">
+<div class="service-number">02 / LAYANAN</div>
+<h3>Editing Laporan</h3>
+<p>Pemeriksaan ejaan, kalimat, tanda baca, dan konsistensi penulisan laporan.</p>
+</div>
+
+<div class="service">
+<div class="service-number">03 / LAYANAN</div>
+<h3>Perapian Format</h3>
+<p>Membantu mengatur margin, font, spasi, nomor halaman, dan tata letak dokumen.</p>
+</div>
+
+<div class="service">
+<div class="service-number">04 / LAYANAN</div>
+<h3>Daftar Isi</h3>
+<p>Bantuan membuat daftar isi, daftar tabel, dan daftar gambar agar lebih teratur.</p>
+</div>
+
+<div class="service">
+<div class="service-number">05 / LAYANAN</div>
+<h3>Struktur BAB I – V</h3>
+<p>Pendampingan memahami dan menyusun struktur bab sesuai ketentuan sekolah.</p>
+</div>
+
+<div class="service">
+<div class="service-number">06 / LAYANAN</div>
+<h3>Konsultasi Laporan</h3>
+<p>Diskusikan bagian laporan yang belum dipahami dan kebutuhan dokumen PKL kamu.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="tentang">
+<div class="container about-grid">
+
+<div>
+<div class="eyebrow">TENTANG RZR PKL SERVICE</div>
+<h2>Membantu Laporan PKL Menjadi Lebih Terarah.</h2>
+
+<p>
+RZR PKL SERVICE merupakan layanan pendampingan laporan
+Praktik Kerja Lapangan yang mengutamakan kemudahan,
+kerapian dokumen, komunikasi yang baik, dan harga terjangkau.
+</p>
+
+<ul class="about-list">
+<li>Pelayanan ramah dan komunikatif</li>
+<li>Biaya menyesuaikan kebutuhan</li>
+<li>Proses konsultasi sederhana</li>
+<li>Mengikuti pedoman laporan sekolah</li>
+</ul>
+</div>
+
+<div class="about-box">
+<h3>Kenapa Memilih Kami?</h3>
+<p>
+Setiap kebutuhan laporan memiliki tingkat pengerjaan yang berbeda.
+Karena itu, kami memberikan kesempatan untuk berkonsultasi terlebih
+dahulu agar layanan dan biaya sesuai dengan kebutuhan kamu.
+</p>
+<br>
+<p>
+Data dan pengalaman kegiatan PKL tetap berasal dari pelanggan
+agar isi laporan sesuai dengan pengalaman sebenarnya.
+</p>
+<br>
+<a href="#kontak" class="btn btn-light">Mulai Konsultasi ↗</a>
+</div>
+
+</div>
+</section>
+
+<!-- PRICE -->
+<section class="price-section" id="harga">
+<div class="container">
+
+<div class="section-heading center">
+<small>INFORMASI HARGA</small>
+<h2>Harga Ramah di Kantong</h2>
+<p>Biaya layanan disesuaikan dengan kebutuhan masing-masing pelanggan.</p>
+</div>
+
+<div class="price-card">
+<div>
+<h3>Harga Fleksibel</h3>
+<p>
+Tidak perlu khawatir dengan biaya. Ceritakan kebutuhan laporan
+PKL kamu dan dapatkan estimasi harga sebelum pengerjaan dimulai.
+</p>
+</div>
+
+<div>
+<div class="price-label">TANYAKAN ESTIMASI BIAYA</div>
+<a href="https://wa.me/62895401061300?text=Halo%2C%20saya%20ingin%20menanyakan%20harga%20jasa%20laporan%20PKL." class="btn">
+Tanya Harga ↗
+</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="cara-order">
+<div class="container">
+
+<div class="section-heading center">
+<small>CARA PEMESANAN</small>
+<h2>Bagaimana Cara Order?</h2>
+<p>Proses konsultasi yang sederhana dan mudah.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">LANGKAH 01</div>
+<h3>Hubungi Kami</h3>
+<p>Kirim pesan WhatsApp dan sampaikan kebutuhan laporan PKL kamu.</p>
+</div>
+
+<div class="step">
+<div class="step-number">LANGKAH 02</div>
+<h3>Konsultasi</h3>
+<p>Diskusikan format sekolah, detail pekerjaan, dan estimasi biaya.</p>
+</div>
+
+<div class="step">
+<div class="step-number">LANGKAH 03</div>
+<h3>Mulai Pendampingan</h3>
+<p>Setelah kesepakatan, proses pendampingan dimulai sesuai kebutuhan.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="kontak">
+<div class="container contact-grid">
+
+<div class="contact-info">
+<div class="eyebrow">HUBUNGI KAMI</div>
+<h2>Butuh Bantuan Laporan PKL?</h2>
+
+<p>
+Silakan hubungi kami untuk bertanya mengenai layanan,
+konsultasi kebutuhan, atau mendapatkan informasi harga.
+Kami siap membantu dengan pelayanan yang ramah.
+</p>
+
+<a class="contact-number" href="https://wa.me/62895401061300">
++62 895-4010-61300 ↗
+</a>
+</div>
+
+<div class="contact-form">
+<form id="orderForm">
+
+<div class="form-group">
+<label for="nama">Nama Lengkap</label>
+<input id="nama" type="text" placeholder="Masukkan nama kamu" required>
+</div>
+
+<div class="form-group">
+<label for="layananPilihan">Layanan yang Dibutuhkan</label>
+<select id="layananPilihan" required>
+<option value="">Pilih layanan</option>
+<option>Pendampingan Penyusunan</option>
+<option>Editing Laporan</option>
+<option>Perapian Format</option>
+<option>Daftar Isi</option>
+<option>Struktur BAB I – V</option>
+<option>Konsultasi Laporan</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="detail">Detail Kebutuhan</label>
+<textarea id="detail" placeholder="Tuliskan kebutuhan laporan PKL kamu..." required></textarea>
+</div>
+
+<button type="submit" class="btn">Kirim Pesan WhatsApp ↗</button>
+
+</form>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<div class="container footer-content">
+
+<div>
+<div class="footer-brand">RZR PKL SERVICE.</div>
+<p>Pendampingan Laporan PKL dengan Harga Terjangkau.</p>
+</div>
+
+<div class="footer-links">
+<a href="#home">Beranda</a>
+<a href="#layanan">Layanan</a>
+<a href="#kontak">Kontak</a>
+</div>
+
+<p>© <span id="year"></span> RZR PKL SERVICE.</p>
+
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/62895401061300?text=Halo%20RZR%20PKL%20Service%2C%20saya%20ingin%20konsultasi.">
+WhatsApp ↗
+</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value.trim();
+  const layanan = document.getElementById("layananPilihan").value;
+  const detail = document.getElementById("detail").value.trim();
+
+  const pesan =
+`Halo RZR PKL SERVICE.
+
+Saya ingin konsultasi layanan laporan PKL.
+
+Nama: ${nama}
+Layanan: ${layanan}
+Detail kebutuhan: ${detail}
+
+Mohon informasi lebih lanjut. Terima kasih.`;
+
+  const url = "https://wa.me/62895401061300?text=" + encodeURIComponent(pesan);
+
+  window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
